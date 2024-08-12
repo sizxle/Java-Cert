@@ -4,7 +4,6 @@
 
  - Contains the minimum software to do java development
  - Javac(compiler), java(launcher), jar(Archiver)
- - 
 
 ## Javac (Compiler)
 
@@ -55,7 +54,7 @@
 ### PSV Main()
   - access modifiers -> they declare the level of exposure for methods or fields to potential callers
   - static binds the main method to the class -> basically the main belong to the class not the instance of the class(object)
-    - it also allows for the main to be called by the class ```java  Zoo.main()```
+    - it also allows for the main to be called by the class ```java  Zoo.main() ```
     - if the main is not there, programme will throw an error and terminate
     - if the main is not static it will throw an exception
     - non static main() is invincible to the JVM
@@ -65,7 +64,7 @@
 
   - String[] args , String args[], String... args
     - hints that there were arguments passed in when JVM started
-    - ```bash [] ``` An array is a fixed-size list of items that are all of the same type.
+    - ``` [] ``` An array is a fixed-size list of items that are all of the same type.
     - ... these are VarArgs(variable argument lists).
     - we can use any variable name we want
 
@@ -74,17 +73,16 @@
 
   - Basically pass parameter to the main method, via command line
   - after compiling 
-  - ```bash java Zoo firstArg SecondArd ```
-  - ```bash java Zoo "firstArg World" SecondArd ```
+  - ```java Zoo firstArg SecondArd ```
+  - ```java Zoo "firstArg World" SecondArd ```
   - command line arguments are treated as String objects
 
 
 Note. 
  - Java class files runs on any machine that has java. Doesn't matter which machine or operating system complied the file
  - from java 11 we can run a file without explicitly compiling first
- - ```bash 
-  java SingleLineRun.java argumentsHere ```
- - called launching **single-file source-code** programs , can only be used if your programm is one file
+ - ``` java SingleLineRun.java argumentsHere ```
+ - called launching **single-file source-code** programs , can only be used if your programme is one file
       - Can only import code that come with the **JDK** with single line command
 
 
@@ -104,11 +102,12 @@ Note.
   - packages rules- they are mostly letters or number separated by ( . ) an period 
 
 
-## WildCards
+## WildCards (*)
 
   - ```java java.util.* ```
-  - used to import all the classes in the packages.
+  - used to import/compile all the classes in the packages.
   - It doesn’t import child packages,fields, or methods; it imports only classes.
+  - cannot use wildcard to include sub-directories
   - using the wildcard doesn't affect code slow down execution. compiler can figure out what is needed
 
 #### Note
@@ -120,6 +119,52 @@ Note.
   - explicitly importing a class takes precedence over wildcards imports.
   - **If you really want to use both classes at the same time** -import the other one while you use the
   fully qualified class name of the other one.
+ - ```bash
+      If this is the folder structure and eac pf the packages does not include **temp**
+      When you run , we cannot run inside src but we can move inside temp to run
+      src/temp/
+              packageA 
+              packageB
+              ```
+
+## Using Alternative directory
+
+ - ```javac``` command places class files in the same directory as the source code, by default.
+ - ```javac``` has an option to specify the destination directory ``` -d ```.
+ - Java options are case sensitive
+ - the package structure is kept under the  destination folder(directory). 
+
+ #### To Run
+ - specify the classpath (-cp) , so java know where to find the class files
+ - classpath - location of the classes needed to compile a programme.
+
+ There are three options to specify classpath
+  1. ```java -cp classes packageb.ClassB```  
+  2. ```java -classpath classes packageb.ClassB``` 
+  3. ```java --class-path classes packageb.ClassB```
+
+### Compiling with JAR files
+
+  - JAR( java archive)-> basically like a zip file for class files
+  - ```java -cp ".;myJar.jar" mypackage.ClassA ```
+  ##### Notes
+    - put classpath on quotes **" "**
+    - (".") - this means the current directory
+    - use " ; " to separate parts of the class path
+    - can use *.jar to match all the jar in the directory
+
+## Creating A JAR FILE
+
+ - Use Jar command
+ - ```jar -cvf newFile.jar .``` creates a jar containing all the files from the current directory
+ - ```jar --create --verbose --file newFile.jar .```
+ - ``-C``` we can use it to specify directory
+ - ```jar -cvf newFile.jar -C <directory>```
+ - ```<directory>``` contains files to be used in the jar
 
 
-###
+## Running a programme in One Line
+
+- can be done as long as the class depends on classes supplied by the jdk
+- does not produce a class file
+
