@@ -59,6 +59,7 @@
 ### Distinguish  between  primitivesTypes and referenceTypes
 
 | Primitive | Reference |
+| --------- | ----------|
 | Small letter | begins with uppercase |
 | Cant take null | can point to null |
 | cannot call methods() | can call methods |
