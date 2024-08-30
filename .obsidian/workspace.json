@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "10daa85ea71b12e5",
+        "id": "2ac0e1ec6cbfd21f",
         "type": "tabs",
         "children": [
           {
-            "id": "7cd1975226af817e",
+            "id": "d427a85837dde103",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 3/Ch3_Notes.md",
+                "file": "Chapter 4/Ch4_Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chapter 3/Ch3_Notes.md",
+                "file": "Chapter 4/Ch4_Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chapter 3/Ch3_Notes.md",
+                "file": "Chapter 4/Ch4_Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chapter 3/Ch3_Notes.md"
+                "file": "Chapter 4/Ch4_Notes.md"
               }
             }
           }
@@ -146,10 +147,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7cd1975226af817e",
+  "active": "d427a85837dde103",
   "lastOpenFiles": [
-    "Chapter 2/Ch2_Notes.md",
+    "().md",
+    "Chapter 4/Ch4_Notes.md",
+    "Chapter 4/src/com/cert/play/PlayGround.Java~",
+    "Chapter 4/Chapter 4.iml",
+    "Wrapper classes.md",
     "Chapter 3/Ch3_Notes.md",
+    "Chapter 5/src/com/cert/play/PlayGround.Java~",
+    "Chapter 5/src/com/cert/play/PlayGround.class",
+    "Chapter 5/Ch5_Notes.md",
+    "Chapter 5/Chapter 3.iml",
+    "Chapter 5/Ch3_Notes.md",
+    "Chapter 5/src/com/cert/play/PlayGround.Java",
+    "Chapter 5/src/com/cert/play/Chapter 3/Chapter 3.iml",
+    "Chapter 5/src/com/cert/play/Chapter 3/Ch3_Notes.md",
+    "Chapter 5/src/com/cert/play/Chapter 3/src/com/cert/play/PlayGround.Java",
+    "Chapter 5/src/com/cert/play/Chapter 3/src/com/cert/play",
+    "Chapter 5/src/com/cert/play/Chapter 3/src/com/cert",
+    "Chapter 3/src/com/cert/play/Chapter 3/Ch3_Notes.md",
+    "Operators.md",
+    "Logical Operators.md",
+    "Chapter 2/Ch2_Notes.md",
     "Chapter 1/Notes.md"
   ]
 }
