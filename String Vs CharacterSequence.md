@@ -1,0 +1,4 @@
+- Character Sequence is an interface that String implements
+- [notes](https://stackoverflow.com/questions/11323962/exact-difference-between-charsequence-and-string-in-java)
+- 
+- 
