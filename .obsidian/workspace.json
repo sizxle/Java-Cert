@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 4/Ch4_Notes.md",
+                "file": "Chapter 5/Ch5_Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chapter 4/Ch4_Notes.md",
+                "file": "Chapter 5/Ch5_Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chapter 4/Ch4_Notes.md",
+                "file": "Chapter 5/Ch5_Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chapter 4/Ch4_Notes.md"
+                "file": "Chapter 5/Ch5_Notes.md"
               }
             }
           }
@@ -146,17 +146,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d9c8a9ee8215c58f",
+  "active": "d427a85837dde103",
   "lastOpenFiles": [
-    "().md",
+    "String Pool.md",
+    "Chapter 5/Ch5_Notes.md",
+    "Untitled.canvas",
+    "2024-09-01.md",
+    "String Vs CharacterSequence.md",
+    "Chapter 1/Notes.md",
+    "Immutability.md",
     "Chapter 4/Ch4_Notes.md",
+    "().md",
     "Chapter 4/src/com/cert/play/PlayGround.Java~",
     "Chapter 4/Chapter 4.iml",
     "Wrapper classes.md",
     "Chapter 3/Ch3_Notes.md",
     "Chapter 5/src/com/cert/play/PlayGround.Java~",
     "Chapter 5/src/com/cert/play/PlayGround.class",
-    "Chapter 5/Ch5_Notes.md",
     "Chapter 5/Chapter 3.iml",
     "Chapter 5/Ch3_Notes.md",
     "Chapter 5/src/com/cert/play/PlayGround.Java",
@@ -168,7 +174,6 @@
     "Chapter 3/src/com/cert/play/Chapter 3/Ch3_Notes.md",
     "Operators.md",
     "Logical Operators.md",
-    "Chapter 2/Ch2_Notes.md",
-    "Chapter 1/Notes.md"
+    "Chapter 2/Ch2_Notes.md"
   ]
 }
