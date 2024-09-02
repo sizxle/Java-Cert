@@ -311,3 +311,256 @@ StringBuilder name = new StringBuilder();// can pass in initial vaules e.g. "Sth
 public static void main(String... args){}// varargs
 ```
 - you can use a variable defined as `varargs` as if its a normal array
+
+
+## Multidimensional Arrays
+
+- multiple array separators(`[]`) are all it takes to declare an array as a multidimension.
+	- `int [][] var;`
+	- `int var [][];`
+	-  `int [] var[];`
+		- note we can specify the size of the array if we want.
+- while arrays seem to be rectangular in shape, an array doesn't need to be 
+	- e.g.
+		- `int [] [] nonRectangular={{1,2},{3},{4,5,6}};`
+		- Asymmetric multidimensional array
+	- Another way is only initializing is with just writing the first dimension
+
+
+## ArrayList
+
+##### Problem
+-  you have to know the exact size of an array when creating it.
+###### Solution
+- ArrayList
+	- can change capacity at runtime
+	- `java.util.ArrayList;`
+
+### Creating an ArrayList
+
+- `ArrayList a = new ArrayList();`
+	- can take in a numeric number
+- slots are not assigned to anything or a list of anything 
+
+ - [[Generics]] - allow you to specify the type of object `ArrayList` will contain
+	 - `ArrayList<String> a = new ArrayList<String>()`
+		 - you don't need the generic on the right side. java will just infer using the datatype on the left 
+		- `<>` - called diamond operator
+
+- `var list = new ArrayList<String>();`
+	- `ArrayList` of String 
+	
+- `var list = new ArrayList<>();`
+	- `ArrayList` of Object 
+
+
+- `ArrayList` implements an interface called `List`.
+- we can store `ArrayList` in a `List` reference.
+- `List` is an interface and interfaces cannot be instantiated.
+	- `new List<>();// does not work`
+
+
+## ArrayList Methods
+
+- `E` 
+	- is not really a class
+	- used by convention in generics to mean "any class that this `array` can hold"
+- `toString()` method is implemented for `arrayList`
+
+
+- add()
+	- `boolean add(E element)` - always returns true
+	- `void add(int index, E element)`
+	- if an `ArrayList`  is not assigned a type we can add anything besides `primitives`
+	- adding something that is not of the type is a `compile error`
+
+- remove()
+	- removes the first matching element it finds in the `ArrayList` or at a specific location(index) 
+	- `boolean remove(Object object)`
+	- `E remove(int index)`
+		- trying to remove something that is not there returns false
+		- an index that doesn't exist throws `IndexOutOfBoundsException`
+
+- removeIf()
+	- used in lambda expressions
+
+
+- set()
+	- changes an element in a `List` without affecting the size
+	- `E set (int index, E newElement)`
+		- `E` that is returned is the replaced element
+		- trying to change index that is not there throws an `IndexOutOfBounds`
+
+- isEmpty()
+	- `boolean isEmpty()`
+		- checks if there are elements in the list
+
+- size()
+	- `int size()`
+		- returns number of elements in a list
+
+- clear()
+	- discards all the elements in the ArrayList
+	- `void clear()`
+
+- contains()
+	- checks if a certain value is in an `ArrayList`
+	- `boolean conatains(Object obj)`
+		- this method calls `equals()` on each element of the `ArrayList` to see whether there are any matches
+
+- equals()
+	- `ArrayList` has a custom implementation of `equals()`
+	- `boolean equals(Object object)`
+
+
+
+## Wrapper classes 
+
+- each primitive has a wrapper class
+	- e.g.
+		- `Boolean.valueOf(true)`
+		- `Byte.valueOf((byte)1)`
+- Wrapper classes have constructors, but `valueOf()` method is more recommended to create instance of them. it has object caching like `String` has `string pool` 
+- Wrapper classes are not immutable
+- They have methods to convert back to `primitives`
+
+- There are also methods for converting a string to a `primitive` or `a wrapper class`
+	- Parse methods
+		- e.g.
+			- `int i = Integer.parseInt("123");`
+		- parse methods return a primitive
+	- if the string passed is not valid for a given type then java throws an exception
+
+
+	##### Note 
+		- Character class has no parse method or valueOf(). when it comes to strings
+
+
+### Creating primitive or Wrapper class from String 
+
+- Boolean
+	- `Boolean.parseBoolean("true")`// returns primitive
+	- `Boolean.valueOf("false")`// returns a wrapper class
+- Double
+	- `Double.parseDouble("1")`
+	- `Double.valueOf("1.3")`
+
+
+### Autoboxing and Unboxing
+
+- Autoboxing - passing a primitive and java converts it to a wrapper class for you 
+- unboxing - does the opposite of autoboxing.
+- Note
+	- unboxing null - gives a `nullPointerException`
+	- calling a method on null returns a `nullPointerException`
+
+
+
+### Converting between Array and List 
+
+#### ArrayList to Array
+- `listName.toArray()` 
+- `toArray()` returns  `Object[]` an array of objects
+	- to make it return a specific type `toArray(new String[0])`
+
+
+#### Array to ArrayList
+
+- There are two methods to do this
+	- they do not guarantee that you will get an `ArrayList`
+
+
+1. Option 1: `Arrays.asList(arrayName)`
+	- creates a List linked to the original array
+	- when change is made to one it reflects on another
+	- gives ,Fixed size `List` and known as backed list because it changes with the array
+	- use `Arrays.asList(arrayName); // returns a List`
+	- `remove()` will cause exception `UnsupportedOperationException`
+		- we are not allowed to temper with the `size`
+2. Option 2 : `List.of(arrayName)`
+	- creates an immutable list
+	- cannot change value and the size of the list after.
+	- changes to the `Array` will not reflect on the `List`
+
+
+### Using VARARGS to create a List
+
+- Varargs - allow you to create Lists in a cool way
+- `List<String> list =  Arrays.asList("one","two")`
+- `List<String> list =  List.of("one","two")`
+	- both creates a fixed size list
+- To add or remove, create `ArrayList` via constructor 
+
+
+#### Sorting
+- same as array 
+	- just different helper class
+	- `Collection.sort(NameOfList)`
+
+
+### Creating Sets and Maps
+
+
+#### Sets
+
+- a collection that cannot contain duplicates
+- it is not ordered , so does not need indexes
+
+- `boolean add(E element)`
+	- it returns a boolean because of sets
+		- when trying to insert a value that is inside a set it returns `false`
+- Two classes that implement Sets
+	1. HashSet (common)
+	2. TreeSet (when sorting is important)
+- `Set<Integer> set = new HashSet<>()`
+
+
+#### Maps
+
+- uses a key to identify values `key-value` pairs
+- HashMap - common implementation of map.
+
+##### Methods for maps
+
+
+- `V get(Object key)`
+	- returns value mapped to the key or `null`
+
+- `V getOrDefault(Object key, V other)`
+	- returns the mapped value to the key or returns other;
+- `V put(K key, V value)`
+	- adds or replaces key/value pair
+	- returns `previous` value or `null`
+- `V remove(Object key)`
+	- removes and returns value mapped to key 
+	- if no value is available return null
+- `boolean conatainsKey(Object key)`
+	- checks if key is present in the map
+- `boolean containsValue(Object value)`
+	- checks if value exist in the map
+- `Set<V> keySet()`
+	- returns a set of keys of the map
+- `Collection<V> values()`
+	- returns collection of all values.
+
+MATH API
+
+- `max()` an `min()`
+	- return the larger / smallest of the two
+- round
+	- gets rid of decimals
+	- `0.5` or higher -> Round up
+	
+	- returns a long for doubles
+	- `long round(double num)`
+	
+	- returns int for floats
+	- `int round(float num)`
+- pow()
+	- exponents
+	- `double power(double num, double exp)`
+
+- Random()
+	- returns a value greater or  equals to zero . but less than 1
+	- `double Random()`
+
