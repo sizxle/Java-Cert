@@ -9,6 +9,6 @@ public class PlayGround{
 		do
 			System.out.println(i++);
 		while(i<5);
-		HashMap
+//		HashMap
 	}
 }
