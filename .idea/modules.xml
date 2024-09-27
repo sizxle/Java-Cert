@@ -3,11 +3,20 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Chapter 1/Chapter 1.iml" filepath="$PROJECT_DIR$/Chapter 1/Chapter 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 10/Chapter 10.iml" filepath="$PROJECT_DIR$/Chapter 10/Chapter 10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 11/Chapter 11.iml" filepath="$PROJECT_DIR$/Chapter 11/Chapter 11.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 2/Chapter 2.iml" filepath="$PROJECT_DIR$/Chapter 2/Chapter 2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 3/Chapter 3.iml" filepath="$PROJECT_DIR$/Chapter 3/Chapter 3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 4/Chapter 4.iml" filepath="$PROJECT_DIR$/Chapter 4/Chapter 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 6/Chapter 6.iml" filepath="$PROJECT_DIR$/Chapter 6/Chapter 6.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 7/Chapter 7.iml" filepath="$PROJECT_DIR$/Chapter 7/Chapter 7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 8/Chapter 8.iml" filepath="$PROJECT_DIR$/Chapter 8/Chapter 8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 9/Chapter 9.iml" filepath="$PROJECT_DIR$/Chapter 9/Chapter 9.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java Cert.iml" filepath="$PROJECT_DIR$/.idea/Java Cert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 11/care/care.iml" filepath="$PROJECT_DIR$/Chapter 11/care/care.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 11/feeding/feeding.iml" filepath="$PROJECT_DIR$/Chapter 11/feeding/feeding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 11/staff/staff.iml" filepath="$PROJECT_DIR$/Chapter 11/staff/staff.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 11/talks/talks.iml" filepath="$PROJECT_DIR$/Chapter 11/talks/talks.iml" />
     </modules>
   </component>
 </project>
