@@ -25,7 +25,7 @@ Rules for string concatenation and the `+` Operator.
 3. expressions are evaluated from left to right.
 
 
-### [[ Immutability]] 
+### [[IMMUTABILITY]] 
 - An object cannot change once created .
 - once a `String` object is created- it is not allowed to change
 - mutable- means changeable
